@@ -42,9 +42,14 @@ set encoding=UTF-8
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set guifont=Noto\ Sans\ Mono:h8
+
+if has('win32')
+    set guifont=JetBrains\ Mono:h10
+endif
+
 set list
 set listchars=eol:↵,trail:~,tab:>-,nbsp:␣
+
 " Enable type inlay hints
 autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
 \ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
