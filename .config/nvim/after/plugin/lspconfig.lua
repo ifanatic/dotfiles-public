@@ -3,7 +3,7 @@ local nvim_lsp = require'lspconfig'
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local lspservers = { "rust_analyzer", "gopls", "tsserver", "dartls", "clangd" }
+local lspservers = { "rust_analyzer", "gopls", "tsserver", "dartls", "clangd", "terraformls", "tflint" }
 for i, lsp in ipairs(lspservers) do
     nvim_lsp[lsp].setup({ 
         on_attach = on_attach,

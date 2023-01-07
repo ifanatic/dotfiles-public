@@ -62,3 +62,6 @@ map L $
 
 nnoremap <silent> <C-p> <cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
 nnoremap <silent> <C-l> <cmd>lua require'telescope.builtin'.live_grep()<CR>
+
+nnoremap <silent> ]h :GitGutterNextHunk<CR>
+nnoremap <silent> [h :GitGutterPrevHunk<CR>
