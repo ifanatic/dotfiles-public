@@ -1,0 +1,36 @@
+:root {
+  --bg-color: #212b30;
+  --fg-color: #c4c7c5;
+}
+
+#TabsToolbar-customization-target{
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+
+#nav-bar-customization-target {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+
+#PanelUI-button {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+
+#navigator-toolbox {
+  --chrome-content-separator-color: var(--bg-color);
+}
+
+#urlbar-input-container{
+  background-color: #212b30;
+  color: #c4c7c5;
+}
+
+#urlbar-background {
+  --toolbarbutton-border-radius: 0px;
+  --toolbarbutton-focus-border-radius: 0px;
+  --toolbar-field-border-color: var(--bg-color);
+  --toolbar-field-focus-border-color: var(--bg-color);
+  --arrowpanel-border-color: var(--bg-color);
+}
