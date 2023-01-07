@@ -18,12 +18,27 @@
   color: var(--fg-color);
 }
 
+.titlebar-spacer[type="pre-tabs"], .titlebar-spacer[type="post-tabs"] {
+  display: none;
+}
+
+#identity-icon-box {
+  --urlbar-box-bgcolor: var(--bg-color);
+  --urlbar-box-text-color: var(--fg-color);
+}
+
+#TabsToolbar > .titlebar-buttonbox-container {
+  --tabs-navbar-shadow-size: 0;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+
 #navigator-toolbox {
   --chrome-content-separator-color: var(--bg-color);
 }
 
-#urlbar-input-container{
-  background-color: #212b30;
+#urlbar-input-container {
+  background-color: var(--bg-color);
   color: #c4c7c5;
 }
 
