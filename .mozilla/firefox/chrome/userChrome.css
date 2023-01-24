@@ -8,6 +8,11 @@
   color: var(--fg-color);
 }
 
+
+#unified-extensions-button  {
+    display: none;
+}
+
 #nav-bar-customization-target {
   background-color: var(--bg-color);
   color: var(--fg-color);
