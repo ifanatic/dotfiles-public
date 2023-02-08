@@ -12,8 +12,8 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufWinEnter * if getcmdwintype() == '' && !(&filetype == 'qf') | silent NERDTreeMirror | endif
 
 " Enable format on save
-autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000)
-autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 1000)
+autocmd BufWritePre *.go lua vim.lsp.buf.format(nil)
+autocmd BufWritePre *.rs lua vim.lsp.buf.format(nil)
 
 colorscheme one
 
@@ -51,7 +51,7 @@ set list
 set listchars=eol:↵,trail:~,tab:>-,nbsp:␣
 
 " Enable type inlay hints
-autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
+autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs
 \ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
 
 if executable('rg')
