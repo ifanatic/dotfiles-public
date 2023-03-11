@@ -45,7 +45,15 @@ keymap.set('n', '<C-p>',
     end
 )
 
-keymap.set('n', '<C-l>', require'telescope.builtin'.live_grep)
+keymap.set('n', '<C-l>', 
+    function()
+        require'telescope.builtin'.live_grep({
+            additional_args = {
+                '--hidden', '-g', '!.git',
+            },
+        })
+    end
+)
 
 keymap.set('n', '<C-n>', ':NvimTreeFocus<CR>', { silent = true, noremap = true })
 keymap.set('n', '<C-t>', ':NvimTreeToggle<CR>', { silent = true, noremap = true })
