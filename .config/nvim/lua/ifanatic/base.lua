@@ -1,3 +1,5 @@
+require 'ifanatic.baseplugins'
+
 vim.cmd('colorscheme one')
 
 vim.opt.completeopt = 'menuone,noinsert,noselect'
@@ -28,31 +30,6 @@ vim.opt.listchars = 'eol:↵,trail:~,tab:>-,nbsp:␣'
 if vim.fn.has 'win32' then
     vim.opt.guifont = 'JetBrains Mono:h10'
 end
-
-require("nvim-tree").setup({
-    filters = {
-        custom = { "^\\.git" },
-    },
-    update_focused_file = {
-        enable = true,
-    },
-    renderer = {
-        group_empty = true,
-        full_name = true,
-        indent_markers = {
-            enable = true,
-        },
-        icons = {
-            webdev_colors = false,
-            show = {
-                file = false,
-                folder = false,
-                git = false,
-            },
-        },
-        special_files = {},
-    },
-})
 
 local function open_nvim_tree(data)
   local directory = vim.fn.isdirectory(data.file) == 1
