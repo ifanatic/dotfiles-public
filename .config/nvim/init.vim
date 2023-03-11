@@ -1,6 +1,8 @@
 runtime ./plug.vim
 runtime ./maps.vim
 
+lua require'ifanatic.base'
+
 " NERD Tree
 " Start NERDTree when Vim starts with a directory argument.
 autocmd StdinReadPre * let s:std_in=1
@@ -14,41 +16,6 @@ autocmd BufWinEnter * if getcmdwintype() == '' && !(&filetype == 'qf') | silent 
 " Enable format on save
 autocmd BufWritePre *.go lua vim.lsp.buf.format(nil)
 autocmd BufWritePre *.rs lua vim.lsp.buf.format(nil)
-
-colorscheme one
-
-" Set completeopt to have a better completion experience
-" :help completeopt
-" menuone: popup even when there's only one match
-" noinsert: Do not insert text until a selection is made
-" noselect: Do not select, force user to select one from the menu
-set completeopt=menuone,noinsert,noselect
-" set completeopt=menu,menuone,noselect
-
-" Avoid showing extra messages when using completion
-set shortmess+=c
-set incsearch       " search as characters are entered
-set hlsearch        " highlight matche
-set ignorecase      " ignore case when searching
-set smartcase       " ignore case if search pattern is lower case
-                    " case-sensitive otherwise
-set number                   " show line number
-set wildmenu                 " visual autocomplete for command menu
-set showmatch                " highlight matching brace
-set termguicolors
-
-set encoding=UTF-8
-
-set tabstop=4
-set shiftwidth=4
-set expandtab
-
-if has('win32')
-    set guifont=JetBrains\ Mono:h10
-endif
-
-set list
-set listchars=eol:↵,trail:~,tab:>-,nbsp:␣
 
 " Enable type inlay hints
 autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs
