@@ -47,9 +47,9 @@ keymap.set('n', '<C-p>',
 
 keymap.set('n', '<C-l>', require'telescope.builtin'.live_grep)
 
-keymap.set('n', '<C-n>', ':NERDTree<CR>')
-keymap.set('n', '<C-t>', ':NERDTreeToggle<CR>')
-keymap.set('n', '<C-f>', ':NERDTreeFind<CR>')
+keymap.set('n', '<C-n>', ':NvimTreeFocus<CR>', { silent = true, noremap = true })
+keymap.set('n', '<C-t>', ':NvimTreeToggle<CR>', { silent = true, noremap = true })
+keymap.set('n', '<C-f>', ':NvimTreeFindFile<CR>', { silent = true, noremap = true })
 
 keymap.set('n', '<]h>', ':GitGutterNextHunk<CR>', { silent = true })
 keymap.set('n', '<[h>', ':GitGutterPrevHunk<CR>', { silent = true })

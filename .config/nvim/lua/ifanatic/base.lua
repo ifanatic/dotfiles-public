@@ -29,4 +29,46 @@ if vim.fn.has 'win32' then
     vim.opt.guifont = 'JetBrains Mono:h10'
 end
 
+require("nvim-tree").setup({
+    filters = {
+        custom = { "^\\.git" },
+    },
+    update_focused_file = {
+        enable = true,
+    },
+    renderer = {
+        group_empty = true,
+        full_name = true,
+        indent_markers = {
+            enable = true,
+        },
+        icons = {
+            webdev_colors = false,
+            show = {
+                file = false,
+                folder = false,
+                git = false,
+            },
+        },
+        special_files = {},
+    },
+})
+
+local function open_nvim_tree(data)
+  local directory = vim.fn.isdirectory(data.file) == 1
+
+  if not directory then
+    return
+  end
+
+  vim.cmd.enew()
+  vim.cmd.bw(data.buf)
+  vim.cmd.cd(data.file)
+  vim.cmd.cd(data.file)
+
+  -- open the tree
+  require("nvim-tree.api").tree.open()
+end
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 

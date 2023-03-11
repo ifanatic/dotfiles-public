@@ -15,9 +15,9 @@ call plug#begin('~/.vim/plugged')
 
     " UI
     Plug 'itchyny/lightline.vim' 
-    Plug 'preservim/nerdtree'
     Plug 'romgrk/barbar.nvim'
     Plug 'mengelbrecht/lightline-bufferline'
+    Plug 'nvim-tree/nvim-tree.lua'
 
     " LSP
     Plug 'rust-lang/rust.vim'
