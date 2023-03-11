@@ -14,10 +14,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-telescope/telescope.nvim'
 
     " UI
-    Plug 'itchyny/lightline.vim' 
     Plug 'romgrk/barbar.nvim'
-    Plug 'mengelbrecht/lightline-bufferline'
     Plug 'nvim-tree/nvim-tree.lua'
+    Plug 'nvim-lualine/lualine.nvim'
 
     " LSP
     Plug 'rust-lang/rust.vim'
