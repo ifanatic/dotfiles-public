@@ -1,7 +1,7 @@
 runtime ./plug.vim
-runtime ./maps.vim
 
 lua require'ifanatic.base'
+lua require'ifanatic.maps'
 
 " NERD Tree
 " Start NERDTree when Vim starts with a directory argument.
