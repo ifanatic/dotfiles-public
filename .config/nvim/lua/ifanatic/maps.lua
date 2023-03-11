@@ -21,43 +21,7 @@ for i=1,8,1 do
     keymap.set('n', '<A-' ..  i .. '>', ':BufferGoto ' .. i .. '<CR>', { silent = true })
 end
 
--- LSP
-
-keymap.set('n', '<c-]>', vim.lsp.buf.definition)
-keymap.set('n', 'gD',    vim.lsp.buf.implementation)
-keymap.set('n', '<c-k>', vim.lsp.buf.signature_help)
-keymap.set('n', '1gD',   vim.lsp.buf.type_definition)
-keymap.set('n', 'gr',    vim.lsp.buf.references)
-keymap.set('n', 'g0',    vim.lsp.buf.document_symbol)
-keymap.set('n', 'gW',    vim.lsp.buf.workspace_symbol)
-keymap.set('n', 'gd',    vim.lsp.buf.declaration)
-keymap.set('n', 'ga',    vim.lsp.buf.code_action)
-keymap.set('n', 'ff',    vim.lsp.buf.format)
-keymap.set('n', 'ff',    vim.lsp.buf.format)
 
 -- PLUGINS
-
-keymap.set('n', '<C-p>', 
-    function() 
-        require'telescope.builtin'.find_files({
-            find_command = { 'rg', '--files', '--hidden', '-g', '!.git' }
-        })
-    end
-)
-
-keymap.set('n', '<C-l>', 
-    function()
-        require'telescope.builtin'.live_grep({
-            additional_args = {
-                '--hidden', '-g', '!.git',
-            },
-        })
-    end
-)
-
-keymap.set('n', '<C-n>', ':NvimTreeFocus<CR>', { silent = true, noremap = true })
-keymap.set('n', '<C-t>', ':NvimTreeToggle<CR>', { silent = true, noremap = true })
-keymap.set('n', '<C-f>', ':NvimTreeFindFile<CR>', { silent = true, noremap = true })
-
 keymap.set('n', '<]h>', ':GitGutterNextHunk<CR>', { silent = true })
 keymap.set('n', '<[h>', ':GitGutterPrevHunk<CR>', { silent = true })
