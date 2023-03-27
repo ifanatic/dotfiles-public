@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-file-browser.nvim' 
 
     " UI
     Plug 'romgrk/barbar.nvim'
