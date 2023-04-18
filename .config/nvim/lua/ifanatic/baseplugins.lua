@@ -25,10 +25,15 @@ require("nvim-tree").setup({
 
 require'bufferline'.setup{
     animation = false,
-    icons = 'numbers',
+    icons = {
+        buffer_index = true,
+        filetype = { enabled = false },
+        separator = {
+            left = '▎',
+        },
+        button = false,
+    },
     tabpages = true,
-    closable = false,
-    icon_separator_active =  '▎',
     icon_custom_colors = false,
 }
 

@@ -1,5 +1,4 @@
-runtime ./plug.vim
-
+lua require'plugins'
 lua require'ifanatic.base'
 lua require'ifanatic.maps'
 
