@@ -7,10 +7,10 @@ return require('packer').startup(function(use)
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     -- Navigation
-	use 'justinmk/vim-sneak'
 	use 'nvim-lua/plenary.nvim'
 	use 'nvim-telescope/telescope.nvim'
 	use 'nvim-telescope/telescope-file-browser.nvim'
+    use 'folke/flash.nvim'
 
     -- UI
 	use 'romgrk/barbar.nvim'
